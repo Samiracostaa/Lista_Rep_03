@@ -24,10 +24,8 @@ import java.util.Scanner;
 
 public class Main{
     public static void main(String[] args) {
-        // Criando o scanner para capturar os dados do usuário
+      
         Scanner scanner = new Scanner(System.in);
-
-        // Entrada de dados
         System.out.print("Informe o sexo (1 para feminino, 2 para masculino): ");
         int sexo = scanner.nextInt();
         System.out.print("Informe sua idade em 2019: ");
@@ -40,12 +38,8 @@ public class Main{
         int pontosMinimosMulher = 86;
         int maxPontosHomem = 105;
         int maxPontosMulher = 100;
-
-      
         int pontosMinimosAtuais = (sexo == 2) ? pontosMinimosHomem : pontosMinimosMulher;
         int maxPontosAtuais = (sexo == 2) ? maxPontosHomem : maxPontosMulher;
-
-        
         int ano = 2019;
         int idade = idade2019;
         int tempoContribuicao = tempoContribuicao2019;
@@ -69,13 +63,8 @@ public class Main{
             if (pontosMinimosAtuais < maxPontosAtuais) {
                 pontosMinimosAtuais++;
             }
-        }
-
-        // Imprimir o ano em que pode se aposentar
+        } 
         System.out.println(ano + "\t" + pontosMinimosAtuais + "\t\t" + pontuacaoObtida);
         System.out.println("Você poderá se aposentar em " + ano + ".");
-
-        // Fechar o scanner
-        scanner.close();
     }
 }
